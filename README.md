@@ -30,6 +30,18 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
 - `config/config.yaml`: Main configuration file for keywords, notification settings, etc.
 - `config/seen.json` and `config/visited_threads.json`: Track seen and visited threads.
 
+## Environment Variables
+
+The following environment variables are used in `config.yaml`:
+
+- `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
+- `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
+- `EMAIL_SENDER`: Email address used as the sender for email notifications.
+- `EMAIL_PASSWORD`: Password for the sender email account.
+- `EMAIL_RECIPIENT`: Email address to receive notifications.
+
+Ensure these variables are set in your environment before running the application.
+
 ## Dependencies
 - `requests`
 - `beautifulsoup4`
