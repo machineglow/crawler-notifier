@@ -1,0 +1,47 @@
+
+debug: false   # set true to enable debug logging
+
+watch:
+  - type: "html"
+    url: "https://forums.redflagdeals.com/hot-deals-f9/"
+    keywords: ["keywork1", "keyword2", "key word3"]
+    search_body: true              # Enable full post body search in threads
+    max_forum_pages: 3             # Number of forum listing pages to crawl
+    max_thread_pages: 5            # Max thread pages to crawl
+    
+    css_params:
+      # Updated CSS selectors according to the forum snippet you provided
+      # THREAD_LIST_ITEM_SELECTOR: "ul.topiclist.topics.with_categories"              # Each thread container
+      THREAD_LIST_ITEM_SELECTOR: "a.thread_title_link"              # Each thread container
+      THREAD_TITLE_SELECTOR: "a.thread_title_link"        # Thread URL link inside thread container
+      THREAD_UNIQUE_ID_ATTR: "data-thread-id"            # Attribute on li.topic for thread ID
+      #THREAD_UNIQUE_ID_ATTR: "li.row.topic"            # Attribute on li.topic for thread ID
+      # Post scanning selectors remain the same (posts inside thread pages)
+      POST_CONTAINER_SELECTOR: "section.thread_posts"
+      # POST_CONTAINER_SELECTOR: "article.post.unreadpost"
+      POST_BODY_SELECTOR: "div.content"
+      NEXT_PAGE_SELECTOR: "a[rel='next']"
+  - type: "rss"
+    url: "https://www.redflagdeals.com/rss/deals.php?city=richmond-hill&content_type=editorial"
+    keywords: ["ssd", "router", "laptop sale"]
+
+notify:
+  telegram:
+    enabled: true
+    bot_token: "${TELEGRAM_BOT_TOKEN}"
+    chat_id: "${TELEGRAM_CHAT_ID}"
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    port: 587
+    sender: "${EMAIL_SENDER}"
+    password: "${EMAIL_PASSWORD}"
+    recipient: "${EMAIL_RECIPIENT}"
+
+interval_minutes: 10
+
+persistence:
+  seen_file: "seen.csv"
+  visited_threads_file: "visited_threads.csv"
+  # Relative path to the file storing notified IDs
+  # You could add other persistence configs here later
