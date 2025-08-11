@@ -34,19 +34,19 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
 
 These BeautifulSoap CSS selector parameters determine how to detect "Threads" in the target HTML and "Posts" when in the thread.  This has been pre-populated with RFD specific parameters
 
-- THREAD_LIST_ITEM_SELECTOR: "a.thread_title_link"              # Each thread container
-- THREAD_TITLE_SELECTOR: "a.thread_title_link"        # Thread URL link inside thread container
-- THREAD_UNIQUE_ID_ATTR: "data-thread-id"            # Attribute on li.topic for thread ID
-- POST_CONTAINER_SELECTOR: "section.thread_posts"
-- POST_BODY_SELECTOR: "div.content"
-- NEXT_PAGE_SELECTOR: "a[rel='next']"
+- `THREAD_LIST_ITEM_SELECTOR`: "a.thread_title_link"              # Each thread container
+- `THREAD_TITLE_SELECTOR`: "a.thread_title_link"        # Thread URL link inside thread container
+- `THREAD_UNIQUE_ID_ATTR`: "data-thread-id"            # Attribute on li.topic for thread ID
+- `POST_CONTAINER_SELECTOR`: "section.thread_posts"
+- `POST_BODY_SELECTOR`: "div.content"
+- `NEXT_PAGE_SELECTOR`: "a[rel='next']"
 
 
 ## Environment Variables
 
 The following environment variables are used in `config.yaml`:
 
-- 'CONFIG_DIR': Directory where config.yaml is found
+- `CONFIG_DIR`: Directory where config.yaml is found
 - `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
 - `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
 - `EMAIL_SENDER`: Email address used as the sender for email notifications.
