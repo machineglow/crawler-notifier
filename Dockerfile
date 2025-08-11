@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ENV CONFIG_DIR=/config
 
-CMD ["python", "main.py"]
+CMD ["python", "app/main.py"]
