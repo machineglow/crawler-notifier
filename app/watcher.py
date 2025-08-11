@@ -85,18 +85,32 @@ def fetch_posts_from_thread(thread_url, keywords, seen, max_thread_pages=5, css_
             logger.debug(f"No post body found for post id {unique_id}")
             # continue
 
-        text = post_body_el.get_text(separator=" ", strip=True).lower()
-        # Split on any non-word character (punctuation, slashes, etc.)
-        words = re.split(r"[^\w]+", text)
-        logger.debug(f"post text: {text[:100]}... (truncated for debug)")
-        for keyword in keywords:
-            if keyword.lower() in words:
-                hit_msg = f"Found '{keyword}' in post {unique_url}"
-                logger.info(f"Keyword match: {hit_msg}")
-                hits.append(hit_msg)
-                seen.add(unique_url)
-                break
+        # Normalize text: replace all non-word characters with spaces, lowercase it
+        raw_text = post_body_el.get_text(separator=" ", strip=True).lower()
+        normalized_text = re.sub(r"[^\w]+", " ", raw_text)
 
+        logger.debug(f"post text: {raw_text[:100]}... (truncated for debug)")
+
+        for keyword in keywords:
+            kw_lower = keyword.lower()
+
+            if " " in kw_lower:
+                # Normalize keyword the same way for multi-word matching
+                normalized_kw = re.sub(r"[^\w]+", " ", kw_lower).strip()
+                if normalized_kw in normalized_text:
+                    hit_msg = f"Found '{keyword}' in post {unique_url}"
+                    logger.info(f"Keyword match: {hit_msg}")
+                    hits.append(hit_msg)
+                    seen.add(unique_url)
+                    break
+            else:
+                # Single-word keyword → whole word match on normalized text
+                if re.search(rf"\b{re.escape(kw_lower)}\b", normalized_text):
+                    hit_msg = f"Found '{keyword}' in post {unique_url}"
+                    logger.info(f"Keyword match: {hit_msg}")
+                    hits.append(hit_msg)
+                    seen.add(unique_url)
+                    break
         # next_link = soup.select_one(css_params["NEXT_PAGE_SELECTOR"])
         # if next_link and "href" in next_link.attrs:
         #     page_url = build_full_url(page_url, next_link["href"])
