@@ -20,8 +20,13 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
    ```
 
 ## Usage
-1. Configure the application by editing `config/config.yaml`.
-2. Run the application:
+1. Create a config directory
+   - `mkdir config`
+3. Configure the application by copying the config-TEMPLATE.yaml to config.yaml
+   - `cp config-TEMPLATE.yaml config/config.yaml`
+5. Configure by editing `config.yaml`.
+6. set `CONFIG_DIR` environment parameter to point to where you stored config.yaml
+7. Run the application:
    ```bash
    python app/main.py
    ```
