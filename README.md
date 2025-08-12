@@ -25,8 +25,14 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
 3. Configure the application by copying the config-TEMPLATE.yaml to config.yaml
    - `cp config-TEMPLATE.yaml config/config.yaml`
 5. Configure by editing `config.yaml`.
-6. set `CONFIG_DIR` environment parameter to point to where you stored config.yaml
-7. Run the application:
+6. set environment variables
+   - `CONFIG_DIR`: Directory where config.yaml is found
+   - `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
+   - `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
+   - `EMAIL_SENDER`: Email address used as the sender for email notifications.
+   - `EMAIL_PASSWORD`: Password for the sender email account.
+   - `EMAIL_RECIPIENT`: Email address to receive notifications.
+8. Run the application:
    ```bash
    python app/main.py
    ```
