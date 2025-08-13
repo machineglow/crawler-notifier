@@ -25,13 +25,15 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
 3. Configure the application by copying the config-TEMPLATE.yaml to config.yaml
    - `cp config-TEMPLATE.yaml config/config.yaml`
 5. Configure by editing `config.yaml`.
-6. set environment variables
+6. set environment variable for config
    - `CONFIG_DIR`: Directory where config.yaml is found
-   - `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
-   - `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
+7. set environment variables for enabled notifiers
    - `EMAIL_SENDER`: Email address used as the sender for email notifications.
    - `EMAIL_PASSWORD`: Password for the sender email account.
    - `EMAIL_RECIPIENT`: Email address to receive notifications.
+   - `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
+   - `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
+   - `PUSHBULLET_API_KEY`: API Key for Pushbullet Notifications.
 8. Run the application:
    ```bash
    python app/main.py
@@ -58,11 +60,12 @@ These BeautifulSoap CSS selector parameters determine how to detect "Threads" in
 The following environment variables are used in `config.yaml`:
 
 - `CONFIG_DIR`: Directory where config.yaml is found
-- `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
-- `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
 - `EMAIL_SENDER`: Email address used as the sender for email notifications.
 - `EMAIL_PASSWORD`: Password for the sender email account.
 - `EMAIL_RECIPIENT`: Email address to receive notifications.
+- `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
+- `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
+- `PUSHBULLET_API_KEY`: API Key for Pushbullet Notifications.
 
 Ensure these variables are set in your environment before running the application.
 
