@@ -95,7 +95,7 @@ def setup_logging(debug: bool):
 
 def notify_services(message, config):
     logger.info(f"Sending notification: {message}")
-    for notifier_name in ["telegram", "email"]:
+    for notifier_name in ["telegram", "email", "pushbullet"]:
         notifier_cfg = config["notify"].get(notifier_name)
         if notifier_cfg and notifier_cfg.get("enabled"):
             try:
