@@ -22,10 +22,11 @@
   <DonateLink/>
   <Requires/>
   <Config Name="CONFIG_DIR" Target="/config" Default="/mnt/user/appdata/crawler-notifier" Mode="rw" Description="Configuration Directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/crawler-notifier</Config>
-  <Config Name="TELEGRAM_BOT_TOKEN" Target="TELEGRAM_BOT_TOKEN" Default="TELEGRAM_BOT_TOKEN" Mode="" Description="Telegram Bot Token" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="TELEGRAM_CHAT_ID" Target="TELEGRAM_CHAT_ID" Default="TELEGRAM_CHAT_ID" Mode="" Description="Telegram Recipient Chat ID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="EMAIL_SENDER" Target="EMAIL_SENDER" Default="youremail@example.com" Mode="" Description="SMTP Email User" Type="Variable" Display="always" Required="false" Mask="false">youremail@example.com</Config>
   <Config Name="EMAIL_PASSWORD" Target="EMAIL_PASSWORD" Default="yourpassword" Mode="" Description="SMTP Email Password" Type="Variable" Display="always" Required="false" Mask="false">yourpassword</Config>
   <Config Name="EMAIL_RECIPIENT" Target="EMAIL_RECIPIENT" Default="recipient@example.com" Mode="" Description="SMTP Email Recipient" Type="Variable" Display="always" Required="false" Mask="false">recipient@example.com</Config>
+  <Config Name="TELEGRAM_BOT_TOKEN" Target="TELEGRAM_BOT_TOKEN" Default="TELEGRAM_BOT_TOKEN" Mode="" Description="Telegram Bot Token" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="TELEGRAM_CHAT_ID" Target="TELEGRAM_CHAT_ID" Default="TELEGRAM_CHAT_ID" Mode="" Description="Telegram Recipient Chat ID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUSHBULLET_API_KEY" Target="PUSHBULLET_API_KEY" Default="PUSHBULLET_API_KEY" Mode="" Description="Pushbullet API Key" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <TailscaleStateDir/>
 </Container>
