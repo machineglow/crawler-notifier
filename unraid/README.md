@@ -20,6 +20,9 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
       2. Create a new chat between the bot and your desired recipient telegram account by messaging it
       3. Find out your telegram CHAT ID by searching for @userinfobot and clicking "start"
 
+   - Pushbullet:
+     1. obtain your Pushbullet API Key
+
    - Email:
       1. Figure out your SMTP email server hostname
       2. Figure out your SMTP server port
