@@ -26,11 +26,12 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
 
 3. Create docker container: Unraid GUI -> docker -> Add Container -> select crawler-notifier from User Templates
    - Map the CONFIG_DIR to your desired configuration directory (/mnt/user/appData/crawler-notifier)
-   - Plug in the Telegram Bot Token in the TELEGRAM_BOT_TOKEN variable in template
-   - Plug in the CHAT ID to the TELEGRAM_CHAT_ID variable in template
    - Plug in your email username to EMAIL_SENDER variable in template
    - Plug in your email password to EMAIL_PASSWORD variable in template
    - Plug in your email to EMAIL_RECIPIENT variable in template
+   - Plug in the Telegram Bot Token in the TELEGRAM_BOT_TOKEN variable in template
+   - Plug in the CHAT ID to the TELEGRAM_CHAT_ID variable in template
+   - Plug in your Pushbullet API Key in the PUSHBULLET_API_KEY variable in template
 
 4. After container starts up, edit the config.yaml created in your CONFIG_DIR
    1. Update watch section:
@@ -44,6 +45,8 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
          - smtp_server: EMAIL_SERVER
          - port: EMAIL_PORT
       - If using telegram 
+         - enabled: true
+      - If using pushbullet 
          - enabled: true
    3. Update interval_minutes
       - Don't go lower than 5-10 minutes or else you may hit rate limits
