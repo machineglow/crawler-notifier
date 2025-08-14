@@ -28,5 +28,7 @@
   <Config Name="TELEGRAM_BOT_TOKEN" Target="TELEGRAM_BOT_TOKEN" Default="TELEGRAM_BOT_TOKEN" Mode="" Description="Telegram Bot Token" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="TELEGRAM_CHAT_ID" Target="TELEGRAM_CHAT_ID" Default="TELEGRAM_CHAT_ID" Mode="" Description="Telegram Recipient Chat ID" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="PUSHBULLET_API_KEY" Target="PUSHBULLET_API_KEY" Default="PUSHBULLET_API_KEY" Mode="" Description="Pushbullet API Key" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUSHOVER_USER_KEY" Target="PUSHOVER_USER_KEY" Default="PUSHOVER_USER_KEY" Mode="" Description="Pushover User Key" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUSHOVER_API_TOKEN" Target="PUSHOVER_API_TOKEN" Default="PUSHOVER_API_TOKEN" Mode="" Description="Pushover API Token" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <TailscaleStateDir/>
 </Container>

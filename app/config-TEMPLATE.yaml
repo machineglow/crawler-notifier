@@ -40,6 +40,10 @@ notify:
   pushbullet:
     enabled: false
     api_key: "${PUSHBULLET_API_KEY}"
+  pushover:
+    enabled: false
+    user_key: "${PUSHOVER_USER_KEY}"
+    api_token: "${PUSHOVER_API_TOKEN}"
 
 interval_minutes: 10
 
