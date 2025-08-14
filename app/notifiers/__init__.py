@@ -1,5 +1,3 @@
-# notifiers.py
-
 from . import telegram, email, pushbullet, pushover
 
 NOTIFIER_SEND_FUNCTIONS = {
