@@ -26,3 +26,6 @@ Dockerfile
 
 # Ignore test environemnt variables
 *.env
+
+# macOS specific files
+.DS_Store
