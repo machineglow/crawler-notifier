@@ -35,6 +35,7 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
    - Plug in the Telegram Bot Token in the TELEGRAM_BOT_TOKEN variable in template
    - Plug in the CHAT ID to the TELEGRAM_CHAT_ID variable in template
    - Plug in your Pushbullet API Key in the PUSHBULLET_API_KEY variable in template
+   - Plug in your Pushover User Key and API Token in the PUSHOVER_USER_KEY and PUSHOVER_API_TOKEN variable in template
 
 4. After container starts up, edit the config.yaml created in your CONFIG_DIR
    1. Update watch section:
@@ -50,6 +51,8 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
       - If using telegram 
          - enabled: true
       - If using pushbullet 
+         - enabled: true
+      - If using pushover 
          - enabled: true
    3. Update interval_minutes
       - Don't go lower than 5-10 minutes or else you may hit rate limits
