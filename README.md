@@ -34,6 +34,8 @@ Crawler Notifier is an application designed to crawl forums and notify users bas
    - `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
    - `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
    - `PUSHBULLET_API_KEY`: API Key for Pushbullet Notifications.
+   - `PUSHOVER_USER_KEY`: User Key for Pushover Notifications.
+   - `PUSHOVER_API_TOKEN`: API Token for Pushover Notifications.
 8. Run the application:
    ```bash
    python app/main.py
@@ -66,6 +68,8 @@ The following environment variables are used in `config.yaml`:
 - `TELEGRAM_BOT_TOKEN`: Token for the Telegram bot used for notifications.
 - `TELEGRAM_CHAT_ID`: Chat ID for the Telegram bot to send messages to.
 - `PUSHBULLET_API_KEY`: API Key for Pushbullet Notifications.
+- `PUSHOVER_USER_KEY`: User Key for Pushover Notifications.
+- `PUSHOVER_API_TOKEN`: API Token for Pushover Notifications.
 
 Ensure these variables are set in your environment before running the application.
 
